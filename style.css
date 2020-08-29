@@ -1,0 +1,193 @@
+:root{
+    --primary: #0d0b0e;
+    --seconadry: #f20505;
+    --text: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas-Neue';
+    font-weight: normal;
+}
+/* Font Lato */
+@font-face{
+    font-family: 'Lato';
+    src: url(/fonts/Lato/Lato-Light.ttf);
+    font-weight: lighter;
+}
+@font-face{
+    font-family: 'Lato';
+    src: url(/fonts/Lato/Lato-Regular.ttf);
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'Lato';
+    src: url(/fonts/Lato/Lato-Bold.ttf);
+
+    font-weight: bold;
+}
+/* Font Bebas-Neue */
+@font-face{
+    font-family: 'Bebas-Neue';
+    src: url(/fonts/Bebas_Neue/BebasNeue-Light.ttf);
+    font-weight: lighter;
+}
+@font-face{
+    font-family: 'Bebas-Neue';
+    src: url(/fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'Bebas-Neue';
+    src: url(/fonts/Bebas_Neue/BebasNeue-Bold.ttf);
+    font-weight: bold;
+}
+/* Homepage */
+/* Nav */
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    color: var(--text);
+    background-color: var(--primary);
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links li a{
+    font-family: 'Bebas-Neue';
+    font-weight: normal;
+    font-size: 24px;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav .logo h4{
+    font-family: 'Bebas-Neue';
+    font-weight: normal;
+    font-family: 40px;
+}
+.logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 200px;
+    font-size: 30px;
+    margin-right: 420px;
+
+}
+nav .logo img{
+    display: block;
+    height: 80px;
+    margin-bottom: 8px;
+    margin-right: 20px;
+}
+nav .nav-links li button{
+    background-color: var(--seconadry);
+    border: none;
+    /* display: block; */
+    padding: 9px 25px;
+    cursor: pointer;
+    transition: padding .1s ease ;
+}
+nav .nav-links li button:hover{
+    background-color: #e94040;
+    padding: 12px 28px;
+    transition: .3s ease ;
+}
+/* Nav End */
+
+/* Nav mobile */
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 5px;
+}
+@media screen and (max-width: 768px){
+    body{
+        display: none;
+    }
+}
+
+
+/* Nav mobile end */
+
+/* Header Section */
+header{
+    position: relative;
+    min-height: 90vh;
+    background-image: url(/img/Tymczasowe\ zdjecia/glowne.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 10vh;
+}
+.header-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    height: 270px;
+    width: 450px;
+    background-color: var(--seconadry);
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    color: var(--text);
+    text-align: center;
+    font-weight: normal;
+}
+.header-btn h2{
+    margin-top: 10px;
+    font-size: 36px;
+}
+.header-btn h1{
+    margin-top: -10px;
+    font-size: 60px;
+}
+.header-btn span:first-of-type{
+    margin-top: -10px;
+    font-size: 40px;
+}
+.header-btn span:nth-of-type(2){
+    font-size: 40px;
+    margin-top: -10px;
+}
+.header-btn h3{
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    /* margin-bottom: -20px; */
+}
+/* Section 2*/
+section{
+    min-height: 100vh;
+    background-color: var(--primary);
+    display: flex;
+}
+section main{
+    width: 70%;
+    background-image: url(/img/Tymczasowe\ zdjecia/);
+}
+section aside{
+    width: 30%;
+}

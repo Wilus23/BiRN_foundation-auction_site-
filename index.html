@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioniczne rewolucje</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/img/logo.png" alt="logo">
+                    <h4>Bioniczne Rewolucje</h4>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">FOTOGRAFIE</a>
+            </li>
+            <li>
+                <a href="#">LICYTUJ NA ONEBID</a>
+            </li>
+            <li>
+                <a href="#">KONTAKT</a>
+            </li>
+            <li>
+                <button><a href="#">REJESTRACJA</a></button>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+<!-- Document with smooth scrolling -->
+    <div class="smooth-scroll-wrapper">
+<!-- Section 1 -->
+    <header>
+        <div class="header-btn">
+            <h2>Aukcja Charytatywna</h2>
+            <h1>Bioniczne Rewolucje</h1>
+            <span>Adres wydarzenia</span>
+            <span>22.10.20</span>
+            <h3>Warszawa</h3>
+        </div>
+    </header>
+<!-- Section 2 -->
+    <section>
+        <main></main>
+        <aside></aside>
+    </section>
+
+
+
+</div>
+    
+    
+    <!-- Smooth scrolling JS effect -->
+    <script>
+        const body = document.body,
+            scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+            height = scrollWrap.getBoundingClientRect().height - 1,
+            speed = 0.04;
+
+        var offset = 0;
+
+        body.style.height = Math.floor(height) + "px";
+
+        function smoothScroll() {
+            offset += (window.pageYOffset - offset) * speed;
+
+            var scroll = "translateY(-" + offset + "px) translateZ(0)";
+            scrollWrap.style.transform = scroll;
+
+            callScroll = requestAnimationFrame(smoothScroll);
+        }
+
+        smoothScroll();
+    </script>
+</body>
+</html>

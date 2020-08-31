@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bioniczne rewolucje</title>
-    <link rel="stylesheet" href="/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
@@ -43,12 +44,66 @@
             <span>22.10.20</span>
             <h3>Warszawa</h3>
         </div>
+            <div class="social">
+                <a href="#"><img src="/img/Ikony komunikacji/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="/img/Ikony komunikacji/linkedin.png" alt="linkedin"></a>
+            </div>
     </header>
 <!-- Section 2 -->
-    <section>
-        <main></main>
-        <aside></aside>
+    <section class="section-2">
+        <main> 
+            <h3>Licytuj</h3>
+            <h3>i przyłącz się</h3>
+            <h3>do medycznej</h3>
+            <h3>rewolucji</h3>
+        </main>
+
+        <aside>
+            <div class="h4">
+                <h4>Wyjątkowa</h4>
+                <h4>Aukcja</h4>
+                <h4>Charytatywna</h4>
+            </div>
+            <div class="p">
+                <p>Niezwykłe zdjęcia mikroskopowe</p>
+                <p>obiektywie artysty fotografa</p>
+                <p>Grzegorza Wełnickiego są przedmiotem już</p>
+                <p>II edycji aukcji na rzecz Fundacji Badań</p>
+                <p>i Rozwoju Nauki. Fotografie przedstawiają</p>
+                <p>efekty przełomowych prac polskich</p>
+                <p>naukowców nad bioniczną trzustką.</p>
+            </div>
+            <div class="btn">
+                <button><a href="#">Zarejestruj się</a></button>
+            </div>
+        </aside>
     </section>
+
+<!-- Section 3 -->
+    <section class="section-3">
+        <h5>JUŻ TYLKO</h5>
+        <div class="counter" id="counter">
+            <span class="days"></span>
+            <span class="hours"></span>
+            <span class="minutes"></span>
+            <span class="seconds"></span>
+        </div>
+        <h5>DO ROZPALENIA BIONICZNYCH REWOLUCJI!</h5>
+    </section>
+
+<!-- Section 4 -->
+    <section class="section-4">
+        <!-- <h2>Mikroświat bionicznej trzustki</h2> -->
+        <main>
+            <div class="box">
+                <h2>Mikroświat</h2>
+                <button class="btn"><a href="#">ZOBACZ GALERIĘ</a></button>
+            </div>
+        </main>
+        <aside><h2>Bionicznej Trzustki</h2></aside>
+    </section>
+
+
 
 
 
@@ -56,26 +111,12 @@
     
     
     <!-- Smooth scrolling JS effect -->
-    <script>
-        const body = document.body,
-            scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-            height = scrollWrap.getBoundingClientRect().height - 1,
-            speed = 0.04;
+    <script src="/js/scroll_smooth.js"></script>
 
-        var offset = 0;
+    <!-- Counter script -->
+    <script src="/js/counter.js"></script>
 
-        body.style.height = Math.floor(height) + "px";
-
-        function smoothScroll() {
-            offset += (window.pageYOffset - offset) * speed;
-
-            var scroll = "translateY(-" + offset + "px) translateZ(0)";
-            scrollWrap.style.transform = scroll;
-
-            callScroll = requestAnimationFrame(smoothScroll);
-        }
-
-        smoothScroll();
-    </script>
+    <!-- CountUp.js -->
+    <script src="/js/countUp.min.js"></script>
 </body>
 </html>

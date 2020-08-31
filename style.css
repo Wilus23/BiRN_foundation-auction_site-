@@ -134,7 +134,7 @@ nav .nav-links li button:hover{
 header{
     position: relative;
     min-height: 90vh;
-    background-image: url(/img/Tymczasowe\ zdjecia/glowne.png);
+    background-image: url(/img/Tymczasowe_zdjecia/glowne.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 10vh;
@@ -176,18 +176,197 @@ header{
     font-size: 40px;
     margin-bottom: 10px;
     margin-top: -10px;
-    /* margin-bottom: -20px; */
 }
+header .social{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    z-index: 2;
+    transform: translate(0, -50%);
+}
+header .social img{
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+header .social img:first-of-type{
+    margin-bottom: 20px;
+}
+
 /* Section 2*/
-section{
+.section-2{
     min-height: 100vh;
     background-color: var(--primary);
     display: flex;
 }
-section main{
-    width: 70%;
-    background-image: url(/img/Tymczasowe\ zdjecia/);
+.section-2 main{
+    width: 60%;
+    background-image: url(/img/Zdjecie_tunele_tlo.png);
+    background-size: cover;
+
 }
-section aside{
-    width: 30%;
+.section-2 main h3{
+    position: relative;
+    color: white;
+    top: 20%;
+    left: 60%;
+    font-size: 100px;
+    transform: translate(-50%, -50%);
+}
+
+/* Mobile for .section-2 main */
+@media (max-width: 1440px){
+    .section-2 main{
+        background-position: right;
+        background-size: cover;
+
+    }
+    .section-2 main h3{
+        font-size: 70px;
+        top: 20%;
+    }
+}
+
+/* Section-2 aside */
+.section-2 aside{
+    width: 40%;
+
+}
+.section-2 aside .h4 h4{
+    font-family: 'Lato';
+    text-transform: uppercase;
+    color: var(--text);
+    font-size: 40px;
+}
+.section-2 aside .h4{
+    margin-top: 20%;
+    margin-bottom: 40px;
+}
+.section-2 aside .p p{
+    font-family: 'Lato';
+    color: white;
+    font-size: 18px;
+}
+.section-2 aside .btn{
+    margin-top: 40px;
+}
+.section-2 aside .btn button{
+    width: 200px;
+    height: 50px;
+    border-radius: 2px;
+    border: none;
+}
+.section-2 aside .btn button a{
+    font-family: 'Bebas-Neue';
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 27px;
+}
+/* Section 3 */
+.section-3{
+    min-height: 70vh;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.section-3 h5{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+.section-3 h5:last-child{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 80px;
+    margin-bottom: 0px;
+}
+.section-3 .counter{
+    width: 800px;
+    height: 150px;
+    border: 5px white solid;
+}
+#counter{
+    display: flex;
+    color: white;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section 4 */
+
+.section-4{
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--primary);
+    color: white;
+}
+/* .section-4 h2{
+    position: absolute;
+    display: block;
+    color: white;
+    left: 40%;
+    margin-top: 40px;
+    font-size: 70px;
+    word-spacing: 10px;
+} */
+.section-4 main{
+    width: 50%;
+    height: 100vh;
+}
+.section-4 main .box{
+    background-image: url(/img/Tymczasowe_zdjecia/mikroswiat.png);
+    background-size: cover;
+    height: 80vh;
+    position: absolute;
+    width: 50%;
+}
+.section-4 main h2{
+    display: flex;
+    position: relative;
+    font-size: 90px;
+    justify-content: right;
+    align-items: flex-end;
+    flex-flow: column;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+.section-4 aside{
+    flex-grow: 1;
+}
+.section-4 aside h2{
+    display: flex;
+    /* position: relative; */
+    font-size: 90px;
+    flex-wrap: wrap-reverse;
+    justify-content: left;
+    align-items: flex-start;
+    flex-flow: column;
+    margin-left: 20px;
+    width: 100%;
+    word-spacing: 20px;
+    text-transform: uppercase;
+}
+.section-4 main .btn {
+    position: absolute;
+    width: 250px;
+    height: 80px;
+    border-radius: 2px;
+    border: none;
+    bottom: 0%;
+    left: 20%;
+    margin-bottom: -40px;
+}
+.section-4 main .btn  a{
+    font-family: 'Bebas-Neue';
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 40px;
 }

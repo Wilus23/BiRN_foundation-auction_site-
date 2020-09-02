@@ -5,7 +5,7 @@ speed = 0.04;
 
 var offset = 0;
 
-body.style.height = Math.floor(height) + "px";
+body.style.height = Math.floor(height - 3000) + "px";
 
 function smoothScroll() {
 offset += (window.pageYOffset - offset) * speed;

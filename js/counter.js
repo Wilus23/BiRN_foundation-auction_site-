@@ -7,13 +7,13 @@ var now = new Date().getTime();
 var diff = dest - now;
 
 var days = Math.floor(diff / (1000* 60*60*24));
-console.log(days);
+// console.log(days);
 var hours = Math.floor((diff % (1000* 60 * 60 * 24)) / (1000 * 60 * 60));
-console.log(hours);
+// console.log(hours);
 var minutes = Math.floor((diff % (1000* 60 * 60)) / (1000 * 60));
-console.log(minutes);
+// console.log(minutes);
 var seconds = Math.floor((diff % (1000* 60)) / 1000);
-console.log(seconds);
+// console.log(seconds);
 
 // document.getElementById("counter").innerHTML = days + " DNI " + hours + " GODZIN " + minutes + " MINUT " + seconds + " SEKUND"
 document.querySelector(".days").innerHTML = days + " DNI";

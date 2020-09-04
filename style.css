@@ -10,40 +10,53 @@
     box-sizing: border-box;
     font-family: 'Bebas-Neue';
     font-weight: normal;
-    /* overflow-x: hidden; */
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+    background-color: var(--primary);
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, var(--seconadry));
+    border-radius: 6px ;
 }
 /* Font Lato */
 @font-face{
     font-family: 'Lato';
-    src: url(/fonts/Lato/Lato-Light.ttf);
+    src: url(fonts/Lato/Lato-Light.ttf);
     font-weight: lighter;
 }
 @font-face{
     font-family: 'Lato';
-    src: url(/fonts/Lato/Lato-Regular.ttf);
+    src: url(fonts/Lato/Lato-Regular.ttf);
     font-weight: normal;
 }
 @font-face{
     font-family: 'Lato';
-    src: url(/fonts/Lato/Lato-Bold.ttf);
+    src: url(fonts/Lato/Lato-Bold.ttf);
 
     font-weight: bold;
 }
 /* Font Bebas-Neue */
 @font-face{
     font-family: 'Bebas-Neue';
-    src: url(/fonts/Bebas_Neue/BebasNeue-Light.ttf);
+    src: url(fonts/Bebas_Neue/BebasNeue-Light.ttf);
     font-weight: lighter;
 }
 @font-face{
     font-family: 'Bebas-Neue';
-    src: url(/fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+    src: url(fonts/Bebas_Neue/BebasNeue-Regular.ttf);
     font-weight: normal;
 }
 @font-face{
     font-family: 'Bebas-Neue';
-    src: url(/fonts/Bebas_Neue/BebasNeue-Bold.ttf);
+    src: url(fonts/Bebas_Neue/BebasNeue-Bold.ttf);
     font-weight: bold;
+}
+/* Smooth scroll */
+.smooth-scroll-wrapper{
+    background-color: var(--primary);
+    transition: 0.1s;
 }
 /* Homepage */
 /* Nav */
@@ -122,12 +135,66 @@ nav .nav-links li button:hover{
     background-color: #ffffff;
     margin: 5px;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
     body{
-        display: none;
+        /* overflow-x: hidden; */
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 12vh;
+        width: 1024px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .logo{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 400px;
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    .nav-links{
+        display: flex;
+        justify-content: space;
+        align-items: center;
+        width: 100%;
+        margin-right: 24%;
     }
 }
-
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        top: 10vh;
+        background-color: var(--seconadry);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+.nav-active{
+    transform: translate(0%);
+}
 
 /* Nav mobile end */
 
@@ -135,10 +202,11 @@ nav .nav-links li button:hover{
 header{
     position: relative;
     min-height: 90vh;
-    background-image: url(/img/Tymczasowe_zdjecia/glowne.png);
+    background-image: url(img/Tymczasowe_zdjecia/glowne.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 10vh;
+    background-color: var(--primary);
 }
 .header-btn{
     display: flex;
@@ -201,10 +269,11 @@ header .social img:first-of-type{
     min-height: 100vh;
     background-color: var(--primary);
     display: flex;
+    background-color: var(--primary);
 }
 .section-2 main{
     width: 60%;
-    background-image: url(/img/Zdjecie_tunele_tlo.png);
+    background-image: url(img/Zdjecie_tunele_tlo.png);
     background-size: cover;
 
 }
@@ -273,6 +342,7 @@ header .social img:first-of-type{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+
 }
 .section-3 h5{
     color: white;
@@ -324,7 +394,7 @@ header .social img:first-of-type{
     height: 100vh;
 }
 .section-4 main .box{
-    background-image: url(/img/Tymczasowe_zdjecia/mikroswiat.png);
+    background-image: url(img/Tymczasowe_zdjecia/mikroswiat.png);
     background-size: cover;
     height: 80vh;
     position: absolute;
@@ -511,30 +581,39 @@ header .social img:first-of-type{
 /* Footer */
 footer{
     min-height: 10vh;
-    background: var(--primary);
+    background-color: var(--primary);
     display: flex;
     justify-content: space-around;
     align-items: space-evenly;
 }
-footer .nav-links{
+footer .footer-links{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100vw;
 }
-footer .nav-links li{
+footer .footer-links li{
     width: 100%;
     text-align: center;
     flex-grow: 1;
 }
-footer .nav-links li:last-of-type{
+footer .footer-links li a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+footer .footer-links li a:last-of-type{
+    margin-right: 10px;
+}
+footer .footer-links li:last-of-type{
     display: flex;
     flex-basis: 1;
     text-align: center;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
 }
-footer .nav-links li button{
+footer .footer-links li button{
     background-color: var(--seconadry);
     border: none;
     /* display: block; */
@@ -542,8 +621,13 @@ footer .nav-links li button{
     cursor: pointer;
     transition: padding .1s ease ;
 }
-nav .nav-links li button:hover{
+nav .footer-links li button:hover{
     background-color: #e94040;
     padding: 12px 28px;
     transition: .3s ease ;
+}
+footer .footer-links li button a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
 }

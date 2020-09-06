@@ -177,7 +177,7 @@ nav .nav-links li button:hover{
         right: 0px;
         height: 90vh;
         top: 10vh;
-        background-color: var(--seconadry);
+        background-color: var(--seconadry); 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -202,12 +202,22 @@ nav .nav-links li button:hover{
 header{
     position: relative;
     min-height: 90vh;
-    background-image: url(img/Tymczasowe_zdjecia/glowne.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url(img/Tymczasowe_zdjecia/glowne.png); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     margin-top: 10vh;
     background-color: var(--primary);
 }
+.video-background{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
 .header-btn{
     display: flex;
     flex-direction: column;
@@ -399,6 +409,12 @@ header .social img:first-of-type{
     height: 80vh;
     position: absolute;
     width: 50%;
+}
+.video-background2{
+    /* position: absolute; */
+    height: 100%;
+    width: 100%;
+    z-index: 0;
 }
 .section-4 main h2{
     display: flex;
@@ -631,3 +647,4 @@ footer .footer-links li button a{
     text-decoration: none;
     color: white;
 }
+/* Footer END */

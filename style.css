@@ -171,29 +171,70 @@ nav .nav-links li button:hover{
     nav{
         padding-top: 40px;
         padding-bottom: 40px;
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        z-index: 99;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+        color: var(--text);
+        background-color: var(--primary);
     }
     .nav-links{
         position: absolute;
         right: 0px;
-        height: 90vh;
-        top: 10vh;
+        height: 88vh;
+        top: 12vh;
         background-color: var(--seconadry); 
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
-        transform: translateX(100%);
+        width: 50vw;
+        transform: translateX(150%);
         transition: transform 0.5s ease-in;
+        /* border: 1px solid white; */
+    }
+    /* .buttonik a{
+        background-color: #0d0b0e;
+        width: 0px;
+        height: 0px;
+        z-index: 40;
+        padding: 10px;
+    }
+    .buttonik:hover{
+        background-color: #0d0b0e;
+        width: 0px;
+        height: 0px;
+        z-index: 40;
+        padding: 10px;
+    } */
+    button{
+        
     }
     .nav-links li{
         opacity: 0;
     }
     .burger{
         display: block;
+        margin-right: 40px;
     }
 }
+
 .nav-active{
-    transform: translate(0%);
+    transform: translate(50%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 /* Nav mobile end */

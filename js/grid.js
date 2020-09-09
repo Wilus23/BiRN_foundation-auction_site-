@@ -11,8 +11,8 @@ $(document).on('scroll', function() {
         $img.addClass('fade-in');
         $img.removeClass('fade-out')
     }
-    else{
-        $img.removeClass('fade-in');
-        $img.addClass('fade-out')
-    }
+    // else{
+    //     $img.removeClass('fade-in');
+    //     $img.addClass('fade-out')
+    // }
 })

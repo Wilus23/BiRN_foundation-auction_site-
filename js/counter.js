@@ -17,14 +17,14 @@ var seconds = Math.floor((diff % (1000* 60)) / 1000);
 
 // document.getElementById("counter").innerHTML = days + " DNI " + hours + " GODZIN " + minutes + " MINUT " + seconds + " SEKUND"
 document.querySelector(".days").innerHTML = days + " DNI";
-document.querySelector(".days").style.marginRight = '40px';
+// document.querySelector(".days").style.marginRight = '40px';
 
 document.querySelector(".hours").innerHTML = hours + " GODZIN";
-document.querySelector(".hours").style.marginRight = '40px';
+// document.querySelector(".hours").style.marginRight = '40px';
 
 document.querySelector(".minutes").innerHTML = minutes + " MINUT";
-document.querySelector(".minutes").style.marginRight = '40px';
+// document.querySelector(".minutes").style.marginRight = '40px';
 
 document.querySelector(".seconds").innerHTML = seconds + " SEKUND";
-document.querySelector(".seconds").style.marginRight = '40px';
+// document.querySelector(".seconds").style.marginRight = '40px';
 }, 1000) ;

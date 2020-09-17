@@ -68,7 +68,7 @@ nav{
     z-index: 99;
     justify-content: space-around;
     align-items: center;
-    height: 10vh;
+    height: 100px;
     color: var(--text);
     background-color: var(--primary);
 }
@@ -95,14 +95,19 @@ nav .logo h4{
     font-weight: normal;
     font-family: 40px;
 }
-.logo{
+.logo a{
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
     width: 200px;
     font-size: 30px;
     margin-right: 420px;
+    color: white;
+    text-decoration: none;
 
+}
+nav .logo{
+    margin-left: 50px;
 }
 nav .logo img{
     display: block;
@@ -123,12 +128,6 @@ nav .nav-links li button:hover{
     padding: 12px 28px;
     transition: .3s ease ;
 }
-.logo a{
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-}
 /* Nav End */
 
 /* Nav mobile */
@@ -143,7 +142,7 @@ nav .nav-links li button:hover{
 }
 @media screen and (max-width: 1024px){
     body{
-        /* overflow-x: hidden; */
+        overflow-x: hidden;
     }
     nav{
         display: flex;
@@ -174,48 +173,128 @@ nav .nav-links li button:hover{
     body{
         overflow-x: hidden;
     }
+    html{
+        /* overflow-x: hidden; */
+    }
     nav{
         padding-top: 40px;
         padding-bottom: 40px;
+        display: flex;
+        /* position: fixed; */
+        top: 0;
+        width: 100vw;
+        z-index: 99;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        height: 15vh;
+        color: var(--text);
+        background-color: var(--primary);
+    }
+    .smooth-scroll-wrapper{
+        overflow-x: hidden;
     }
     .nav-links{
+        overflow-x: hidden;
         position: absolute;
         right: 0px;
-        height: 90vh;
-        top: 10vh;
-        background-color: var(--seconadry);
+        height: 85vh;
+        top: 15vh;
+        background-color: var(--seconadry); 
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
-        transform: translateX(100%);
+        width: 50vw;
+        transform: translateX(150%);
         transition: transform 0.5s ease-in;
+        overflow-x: hidden;
+        /* border: 1px solid white; */
+    }
+    /* .buttonik a{
+        background-color: #0d0b0e;
+        width: 0px;
+        height: 0px;
+        z-index: 40;
+        padding: 10px;
+    }
+    .buttonik:hover{
+        background-color: #0d0b0e;
+        width: 0px;
+        height: 0px;
+        z-index: 40;
+        padding: 10px;
+    } */
+    .logo{
+        display: flex;
+        justify-content: flex-start;
+        align-items: space-around;
+        width: 50%;
+
+        margin-left: 50px;
+        /* margin-left: -400px; */
     }
     .nav-links li{
         opacity: 0;
     }
     .burger{
-        display: block;
+      display: block;
+      width: 50vw;
+      margin-left: 10%;
     }
 }
+
 .nav-active{
-    transform: translate(0%);
+    transform: translate(50%);
 }
 
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.nav-active{
+    transform: translateX(50%);
+}
+/* Head */
+header{
+    margin-top: 10vh;
+    min-height: 30vh;
+    background-color: var(--primary);
+}
+header h1{
+    padding-top: 5vh;
+    color: white;
+    font-size: 100px;
+    margin-left: 5vw;
+}
+header p{
+    color: white;
+    font-family: 'Lato';
+    margin-left: 5vw;
+    margin-top: 30px;
+    margin-right: 100px;
+}
+/* Gallery section */
 .grid{
     background-color: var(--primary);
     margin-top: 10vh;
     display: grid;
-    grid-template-columns: repeat(6, 200px);
+    grid-template-columns: repeat(6, 280px);
     justify-content: center;
     align-content: center;
-    grid-gap: 10px;
+    grid-gap: 5px;
     min-height: 100vh;
     padding-bottom: 10vh;
 }
 .grid img{
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
 }
 #lightbox{
     position: fixed;
@@ -239,6 +318,117 @@ nav .nav-links li button:hover{
     background-color: var(--primary);
     border: 2px solid white;
 }
+@media (max-width: 1840px){
+    .grid{
+        background-color: var(--primary);
+        margin-top: 10vh;
+        display: grid;
+        grid-template-columns: repeat(6, 200px);
+        justify-content: center;
+        align-content: center;
+        grid-gap: 5px;
+        min-height: 100vh;
+        padding-bottom: 10vh;
+    }
+    .grid img{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (max-width: 1440px){
+/* Head */
+header{
+    margin-top: 10vh;
+    min-height: 30vh;
+    background-color: var(--primary);
+}
+header h1{
+    padding-top: 5vh;
+    color: white;
+    font-size: 100px;
+    margin-left: 4vw;
+}
+header p{
+    color: white;
+    font-family: 'Lato';
+    margin-left: 4vw;
+    margin-top: 30px;
+    margin-right: 4vw;
+}
+/* Gallery section */
+.grid{
+    background-color: var(--primary);
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: repeat(6, 180px);
+    justify-content: center;
+    align-content: center;
+    grid-gap: 5px;
+    min-height: 100vh;
+    padding-bottom: 10vh;
+}
+.grid img{
+    width: 180px;
+    height: 180px;
+}
+}
+
+@media (max-width: 1124px){
+    .grid{
+        background-color: var(--primary);
+        margin-top: 10vh;
+        display: grid;
+        grid-template-columns: repeat(4, 180px);
+        justify-content: center;
+        align-content: center;
+        grid-gap: 5px;
+        min-height: 100vh;
+        padding-bottom: 10vh;
+    }
+    .grid img{
+        width: 180px;
+        height: 180px;
+    }
+}
+@media (max-width: 768px){
+    .grid{
+        background-color: var(--primary);
+        margin-top: 10vh;
+        display: grid;
+        grid-template-columns: repeat(1, 200px);
+        justify-content: center;
+        align-content: center;
+        grid-gap: 10px;
+        min-height: 100vh;
+        padding-bottom: 10vh;
+    }
+    .grid img{
+        width: 200px;
+        height: 200px;
+    }
+    #lightbox{
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, .8);
+        display: none;
+    }
+    #lightbox.active{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #lightbox img{
+        max-width: 90%;
+        max-height: 80%;
+        padding: 8px;
+        background-color: var(--primary);
+        border: 2px solid white;
+}}
+/* Footer */
 footer{
     min-height: 10vh;
     background-color: var(--primary);
@@ -290,4 +480,68 @@ footer .footer-links li button a{
     margin-left: 10px;
     text-decoration: none;
     color: white;
+}
+@media (max-width: 768px){
+    footer{
+        min-height: 10vh;
+        background-color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .footer-links{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100vw;
+    }
+    footer .footer-links li{
+        width: 100%;
+        text-align: center;
+        flex-grow: 1;
+        list-style: none;
+    }
+    footer .footer-links li:first-of-type{
+        margin-left: 5px;
+    }
+    footer .footer-links li a{
+        display: flex;
+        font-size: 10px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+    footer .footer-links li a:last-of-type{
+        margin-right: 5px;
+    }
+    footer .footer-links li:last-of-type{
+        display: flex;
+        flex-basis: 2;
+        text-align: center;
+        justify-content: stretch;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    footer .footer-links li:last-of-type a:last-of-type{
+        margin-right: 10px;
+    }
+    footer .footer-links li button{
+        background-color: var(--seconadry);
+        border: none;
+        /* display: block; */
+        padding: 3px 1px;
+        margin-right: 3px;
+        cursor: pointer;
+        transition: padding .1s ease;
+
+    }
+    nav .footer-links li button:hover{
+        background-color: #e94040;
+        transition: .3s ease ;
+    }
+    footer .footer-links li button a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: white;
+    }
 }
